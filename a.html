@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<script src="js/mui.min.js"></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav bg-color">
+		    <h1 class="mui-title">首页</h1>
+		</header>
+		<!--mbody-->
+		<div class="mui-content">
+		    <!--轮播开始-->
+		   <div id="slider" class="mui-slider" >
+		     <div class="mui-slider-group mui-slider-loop">
+		       <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		       <div class="mui-slider-item mui-slider-item-duplicate">
+		         <a href="#">
+		           <img src="images/index/nevergeiup.jpg">
+		         </a>
+		       </div>
+		       <!-- 第一张 -->
+		       <div class="mui-slider-item">
+		         <a href="#">
+		           <img src="images/index/3v3.jpg">
+		         </a>
+		       </div>
+		       <!-- 第二张 -->
+		       <div class="mui-slider-item">
+		         <a href="#">
+		           <img src="images/index/bro.jpg">
+		         </a>
+		       </div>
+		       <!-- 第三张 -->
+		       <div class="mui-slider-item">
+		         <a href="#">
+		           <img src="images/index/james.jpg">
+		         </a>
+		       </div>
+		       <!-- 第四张 -->
+		       <div class="mui-slider-item">
+		         <a href="#">
+		           <img src="images/index/nevergeiup.jpg">
+		         </a>
+		       </div>
+		       <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		       <div class="mui-slider-item mui-slider-item-duplicate">
+		         <a href="#">
+		           <img src="images/index/3v3.jpg">
+		         </a>
+		       </div>
+		     </div>
+		     <div class="mui-slider-indicator">
+		       <div class="mui-indicator mui-active"></div>
+		       <div class="mui-indicator"></div>
+		       <div class="mui-indicator"></div>
+		       <div class="mui-indicator"></div>
+		     </div>
+		   </div>
+		    <!--轮播结束-->
+		    <!--九宫格开始-->
+		    <ul class="mui-table-view mui-grid-view mui-grid-9">
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		        <a href="#" id="news">
+		            <span class="mui-icon iconfont icon-xinwennews"></span>
+		            <div class="mui-media-body">球场资讯</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		        <a href="#" id="wep">
+		            <span class="mui-icon iconfont icon-qiuxie"></span>
+		            <div class="mui-media-body">牛掰装备</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		        <a href="#" id="game">
+		            <span class="mui-icon iconfont icon-game"></span>
+		            <div class="mui-media-body">2K</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		        <a href="#">
+		            <span class="mui-icon iconfont icon-gouwu"></span>
+		            <div class="mui-media-body">新品预告</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		        <a href="#">
+		            <span class="mui-icon iconfont icon-shipin"></span>
+		            <div class="mui-media-body">精彩瞬间</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		        <a href="#">
+		            <span class="mui-icon iconfont icon-guanyuwomen3"></span>
+		            <div class="mui-media-body">关于我们</div>
+		        </a>
+		    </li>
+		        </ul>
+		    
+		    <!--九宫格结束-->
+		    <!--卡片1-->
+		    <div class="mui-card">
+			<!--页眉，放置标题-->
+				<div class="mui-card-header">
+				跟陌生人来一场说打就打的球赛
+					</div>
+			<!--内容区-->
+				<div class="mui-card-content"><img src="images/index/yueqiu.jpg"></div>
+			<!--页脚，放置补充信息或支持的操作-->
+				<div class="mui-card-footer">
+					周末还在因朋友加班,自己一人无球可打,而烦恼,来同城约球,来一场说打就打的篮球
+				</div>
+			</div>
+		    <!--卡片2-->
+		    <div class="mui-card">
+			<!--页眉，放置标题-->
+				<div class="mui-card-header">
+				偶遇总在一瞬间
+					</div>
+			<!--内容区-->
+				<div class="mui-card-content"><img src="images/index/basketgril.jpg"></div>
+			<!--页脚，放置补充信息或支持的操作-->
+				<div class="mui-card-footer">
+					约,不止陌陌,篮球也可以
+				</div>
+			</div>
+		</div>
+	</body>
+<script>
+	mui.init();
+	//js轮播处开始
+	//获得slider插件对象
+var gallery = mui('.mui-slider');
+gallery.slider({
+  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+});
+//js轮播处结束
+
+
+//九宫格点击跳转
+//因为多次调用所以封装起来
+
+	//打开新窗口(新闻)
+			var id=document.getElementById('news');
+			id.addEventListener('tap',function(){
+				//打开新窗口
+			mui.openWindow({ 
+					url:'news.html', //需要打开页面的url地址 
+					id:'news',  //需要打开页面的url页面id
+					styles:{ 
+						top:'0px',//新页面顶部位置 
+						bottom:'0px',//新页面底部位置 
+	//					width:newpage-width,//新页面宽度，默认为100% 
+	//					height:newpage-height,//新页面高度，默认为100% ...... 
+					}, 
+					extras:{ 
+						name:'aries',
+						age:'18',
+	//					.....//自定义扩展参数，可以用来处理页面间传值 
+					},show:{ //控制打开页面的类型
+						autoShow:true,
+	//					//页面loaded事件发生后自动显示，默认为true 
+						aniShow:'zoom-fade-out',//页面显示动画，默认为”slide-in-right“；  页面出现的方式 左右上下
+						duration:'1000'//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒； 
+					}, waiting:{ // 控制 弹出转圈框的信息
+						autoShow:true,//自动显示等待框，默认为true 
+						title:'新闻加载中...',//等待对话框上显示的提示内容 
+						options:{ 
+							width:'300px',//等待框背景区域宽度，默认根据内容自动计算合适宽度 
+							height:'300px',//等待框背景区域高度，默认根据内容自动计算合适高度 ...... 
+						} 
+					}
+			});
+			})
+
+
+
+//
+//打开新窗口(装备)
+	var id=document.getElementById('wep');
+			id.addEventListener('tap',function(){
+				//打开新窗口
+			mui.openWindow({ 
+					url:'wep.html', //需要打开页面的url地址 
+					id:'wep',  //需要打开页面的url页面id
+					styles:{ 
+						top:'0px',//新页面顶部位置 
+						bottom:'0px',//新页面底部位置 
+	//					width:newpage-width,//新页面宽度，默认为100% 
+	//					height:newpage-height,//新页面高度，默认为100% ...... 
+					}, 
+					extras:{ 
+						name:'aries',
+						age:'18',
+	//					.....//自定义扩展参数，可以用来处理页面间传值 
+					},show:{ //控制打开页面的类型
+						autoShow:true,
+	//					//页面loaded事件发生后自动显示，默认为true 
+						aniShow:'zoom-fade-out',//页面显示动画，默认为”slide-in-right“；  页面出现的方式 左右上下
+						duration:'1000'//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒； 
+					}, waiting:{ // 控制 弹出转圈框的信息
+						autoShow:true,//自动显示等待框，默认为true 
+						title:'信息加载中...',//等待对话框上显示的提示内容 
+						options:{ 
+							width:'300px',//等待框背景区域宽度，默认根据内容自动计算合适宽度 
+							height:'300px',//等待框背景区域高度，默认根据内容自动计算合适高度 ...... 
+						} 
+					}
+			});
+			})
+//打开2k页面
+	var id=document.getElementById('game');
+			id.addEventListener('tap',function(){
+				//打开新窗口
+			mui.openWindow({ 
+					url:'game.html', //需要打开页面的url地址 
+					id:'game',  //需要打开页面的url页面id
+					styles:{ 
+						top:'0px',//新页面顶部位置 
+						bottom:'0px',//新页面底部位置 
+	//					width:newpage-width,//新页面宽度，默认为100% 
+	//					height:newpage-height,//新页面高度，默认为100% ...... 
+					}, 
+					extras:{ 
+						name:'aries',
+						age:'18',
+	//					.....//自定义扩展参数，可以用来处理页面间传值 
+					},show:{ //控制打开页面的类型
+						autoShow:true,
+	//					//页面loaded事件发生后自动显示，默认为true 
+						aniShow:'zoom-fade-out',//页面显示动画，默认为”slide-in-right“；  页面出现的方式 左右上下
+						duration:'1000'//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒； 
+					}, waiting:{ // 控制 弹出转圈框的信息
+						autoShow:true,//自动显示等待框，默认为true 
+						title:'信息加载中...',//等待对话框上显示的提示内容 
+						options:{ 
+							width:'300px',//等待框背景区域宽度，默认根据内容自动计算合适宽度 
+							height:'300px',//等待框背景区域高度，默认根据内容自动计算合适高度 ...... 
+						} 
+					}
+			});
+			})
+
+
+
+
+
+//封装函数
+//function tiaozhuan(a,b){
+//			var id=document.getElementById(a);
+//			id.addEventListener('tap',function(){
+//				//打开新窗口
+//			mui.openWindow({ 
+//					url:b+'.html', //需要打开页面的url地址 
+//					id:b,  //需要打开页面的url页面id
+//					styles:{ 
+//						top:'0px',//新页面顶部位置 
+//						bottom:'0px',//新页面底部位置 
+//	//					width:newpage-width,//新页面宽度，默认为100% 
+//	//					height:newpage-height,//新页面高度，默认为100% ...... 
+//					}, 
+//					extras:{ 
+//						name:'aries',
+//						age:'18',
+//	//					.....//自定义扩展参数，可以用来处理页面间传值 
+//					},show:{ //控制打开页面的类型
+//						autoShow:true,
+//	//					//页面loaded事件发生后自动显示，默认为true 
+//						aniShow:'zoom-fade-out',//页面显示动画，默认为”slide-in-right“；  页面出现的方式 左右上下
+//						duration:'1000'//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒； 
+//					}, waiting:{ // 控制 弹出转圈框的信息
+//						autoShow:true,//自动显示等待框，默认为true 
+//						title:'东翌学院...',//等待对话框上显示的提示内容 
+//						options:{ 
+//							width:'300px',//等待框背景区域宽度，默认根据内容自动计算合适宽度 
+//							height:'300px',//等待框背景区域高度，默认根据内容自动计算合适高度 ...... 
+//						} 
+//					}
+//			});
+//			})
+//}
+</script>
+</html>
